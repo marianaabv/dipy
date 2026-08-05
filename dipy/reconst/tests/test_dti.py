@@ -1256,8 +1256,7 @@ def test_cti_params_in_dti_fit():
     npt.assert_equal(fit.fa.shape, (2, 2, 2))
     npt.assert_array_almost_equal(fit.evals[0, 0, 0], [1.5e-3, 0.5e-3, 0.5e-3])
     npt.assert_(not np.any(np.isnan(fit.fa)))
-    
-    
+
 def test_cholesky_transformations():
     """Test Cholesky decomposition and its inverse for DTI."""
     dt_gt = np.array([0.0017, 0, 0.0003, 0, 0, 0.0003])
@@ -1315,3 +1314,6 @@ def test_cholesky_jac_warning():
     data = np.ones(bvals.shape[0]) * 100
     assert_warns(UserWarning, dtim.fit, data)
 >>>>>>> fix-fwdti
+=======
+    
+>>>>>>> cti-modular
