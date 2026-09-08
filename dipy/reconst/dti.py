@@ -1974,6 +1974,7 @@ def nlls_fit_tensor(
                 # Set NaN values
                 this_param[:] = np.nan  # so that S0_hat is NaN
                 params[vox, :] = np.nan
+                evals = np.full(3, np.nan)
 
         if return_S0_hat:
             model_S0[vox] = np.exp(-this_param[-1])
